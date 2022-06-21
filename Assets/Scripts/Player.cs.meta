@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 51626c68d13b8c44188c2e4f9c391631
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - am: {instanceID: 0}
+  - aud: {instanceID: 0}
+  - hit: {fileID: 8300000, guid: 2f12bc4253e516c419ac069ad590756e, type: 3}
+  - coin: {fileID: 8300000, guid: 870d07c2252c3dc46bda384e3fc8c8c7, type: 3}
+  - Bullet: {fileID: 7315712294619330907, guid: 519eb337747c4f141916da523ea9a4d7, type: 3}
+  - bulPos: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
