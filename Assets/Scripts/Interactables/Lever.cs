@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 public class Lever : MonoBehaviour
 {
     public GameObject[] wallBlocks ;

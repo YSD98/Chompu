@@ -154,7 +154,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 298899295}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &187318645
 MonoBehaviour:
@@ -258,7 +258,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.776824, y: 1}
+    m_SensorSize: {x: 1.7751938, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -378,7 +378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374373594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7168236, y: 0.5, z: -10}
+  m_LocalPosition: {x: -0.7249756, y: 0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -424,7 +424,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3952970800580803432, guid: 713778d353ceaed4da1a2feca02fa431, type: 3}
@@ -476,7 +475,6 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 713778d353ceaed4da1a2feca02fa431, type: 3}
 --- !u!4 &1400678553 stripped
 Transform:
@@ -515,7 +513,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1941346555}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!19719996 &1416032241
 TilemapCollider2D:
@@ -533,7 +531,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
-  m_UseDelaunayMesh: 0
 --- !u!483693784 &1416032242
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -876,7 +873,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7250269370711815653, guid: db87ddbbf87b8ac4bb4a4c915e33ea29, type: 3}
@@ -935,12 +931,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7250269371223333334, guid: db87ddbbf87b8ac4bb4a4c915e33ea29, type: 3}
+      propertyPath: pd
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7250269371223333335, guid: db87ddbbf87b8ac4bb4a4c915e33ea29, type: 3}
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: db87ddbbf87b8ac4bb4a4c915e33ea29, type: 3}
 --- !u!1 &1653877479
 GameObject:
@@ -1056,7 +1055,6 @@ PolygonCollider2D:
       - {x: -9.599999, y: -6}
       - {x: 9.599999, y: -6}
       - {x: 9.599999, y: 6}
-  m_UseDelaunayMesh: 0
 --- !u!1 &1941346553
 GameObject:
   m_ObjectHideFlags: 0
