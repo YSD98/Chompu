@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -25,6 +26,7 @@ public class Canvs : MonoBehaviour
         inGameUI.SetActive(false);
         gameOver.SetActive(true);
     }
+    public void Neww(){SceneManager.LoadScene(0);}
 
     public void Quit()
     {

@@ -78,6 +78,8 @@ public class Player : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
+        if(col.gameObject.name == "DangerZone")
+            health = 0f;
         if (col.gameObject.tag == "Enemy")
         {
             isHit = true;
