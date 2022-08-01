@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     float walkInput;
     Rigidbody2D rb;
     [HideInInspector]public bool isGameOver = false,isGun = false,isJumping,isHit,isCoin,isShooting,canJump;
-//------------------------------------------------------------------------------------------------------------------------- 
+    //------------------------------------------------------------------------------------------------------------------------- 
     void Start()
     {
         BulletParent = new GameObject("BulletParent");
@@ -22,42 +22,41 @@ public class Player : MonoBehaviour
         canJump = Physics2D.OverlapCircle(gndChk.transform.position,.05f,lm);
         walkInput = Input.GetAxisRaw("Horizontal");
 
-        Movement();
-
-        if(ammo > 0 && isGun)Shoot();
+        if (walkInput > 0)  Left();
+        if (walkInput < 0)  Right();
+        if (Input.GetButtonDown("Jump")) Jump();
+        if (Input.GetButtonDown("Fire2"))  Shoot();
+        if (walkInput == 0) am.SetBool("IsRun", false);
         
         if(health <=0)isGameOver = true;
     }
-    void Movement()
+    public void Left()
     {
-        if (walkInput > 0)
-        {
-            transform.rotation = Quaternion.Euler(0,0,0);
-            am.SetBool("IsRun",true);
-            transform.Translate(Vector2.right * Time.deltaTime * speed);
-        }
-        if (walkInput< 0)
-        {
-            transform.rotation = Quaternion.Euler(0,-180,0);
-            am.SetBool("IsRun",true);
-            transform.Translate(Vector2.right * Time.deltaTime * speed);
-        }
-        if (walkInput == 0)
-            am.SetBool("IsRun",false);
-        
-        if (Input.GetButtonDown("Jump") && canJump)
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+        am.SetBool("IsRun", true);
+        transform.Translate(Vector2.right * Time.deltaTime * speed);
+    }
+    public void Right()
+    {
+        transform.rotation = Quaternion.Euler(0, -180, 0);
+        am.SetBool("IsRun", true);
+        transform.Translate(Vector2.right * Time.deltaTime * speed);
+    }
+    public void Jump()
+    {
+        if(canJump)
         {
             isJumping = true;
             am.Play("Jump");
-            rb.AddForce(Vector2.up * upForce,ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * upForce, ForceMode2D.Impulse);
         }
     }
-    void Shoot()
+    public void Shoot()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(ammo > 0 && isGun)
         {
             isShooting = true;
-            ammo --;
+            ammo--;
             GameObject bl = Instantiate(Bullet,bulPos.transform.position,bulPos.transform.rotation);
             bl.transform.parent = BulletParent.transform;
         }

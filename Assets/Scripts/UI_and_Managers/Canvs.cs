@@ -9,7 +9,7 @@ public class Canvs : MonoBehaviour
 {
     public Player pl;
     public Text scor,healt,ammo;
-    public GameObject inGameUI,gameOver,gun;
+    public GameObject inGameUI,gameOver,gun,shootBtn;
     void Update()
     {
         scor.text = $"{pl.scoree}  x " ;
@@ -19,6 +19,8 @@ public class Canvs : MonoBehaviour
         if(pl.isGameOver)GameOver();
         
         if(pl.isGun) gun.SetActive(true);
+        if(pl.isGun) shootBtn.SetActive(true);
+        if(pl.ammo <= 0) shootBtn.SetActive(false);
     }
 
     public void GameOver()
